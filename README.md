@@ -8,11 +8,11 @@
 </h1>
 
 **Note:** This demo is built with [Gatsby](https://www.gatsbyjs.org/), and [Netlify CMS](https://www.netlifycms.org) <br />
-Demo URL: [https://gatsby-blogger.netlify.com/](https://gatsby-blogger.netlify.com/).
+**Demo URL:** [https://gatsby-blogger.netlify.com/](https://gatsby-blogger.netlify.com/)
 
  <br />
 
-![](docs/screenshot.png) <br />
+![](docs/screenshot.jpg) <br />
 
   <br />
 
