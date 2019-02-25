@@ -6,7 +6,7 @@ const config = {
   storageBucket: process.env.FB_STORAGE_BUCKET,
   messagingSenderId: process.env.FB_MESSAGING_SENDER_ID,
 };
-
+console.log(process.env.FB_API_KEY);
 class Firebase {
   constructor(app) {
     app.initializeApp(config)
