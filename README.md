@@ -7,20 +7,19 @@
   Gatsby + ContentFul + Firebase
 </h1>
 
-**Note:** This starter uses [Gatsby v2](https://www.gatsbyjs.org/blog/2018-09-17-gatsby-v2/).
-
-This demo is built with [Gatsby](https://www.gatsbyjs.org/), and [Netlify CMS](https://www.netlifycms.org): [Demo URL](https://gatsby-blogger.netlify.com/).
+**Note:** This demo is built with [Gatsby](https://www.gatsbyjs.org/), and [Netlify CMS](https://www.netlifycms.org)
+Demo URL: [https://gatsby-blogger.netlify.com/](https://gatsby-blogger.netlify.com/).
 
 ## Features
 
-- uses:
+- Uses:
   - Gatsby.js (react + redux)
   - Firebase
   - ContentFul
   - Formspree
   - Disqus
 
-- features:
+- Features:
   - Sign in
   - Sign up
   - Forget Password
@@ -36,18 +35,21 @@ This demo is built with [Gatsby](https://www.gatsbyjs.org/), and [Netlify CMS](h
 
 ## Quick Start
 
-Take the clone of this project.
+Create your own project with the below Gatsby CLI (assuming Gatsby is installed) & install all the dependencies.
+
 
 ```sh
+gatsby new your-project-name https://github.com/aslammultidots/blogger
+cd your-project-name
 npm install
 ```
 
 ## Requirements 
 
 To run successfully use your own credentials for:
-  - **Firebase**, 
-  - **Disqus**, 
-  - **Formspree**,
+  - **Firebase**
+  - **Disqus**
+  - **Formspree**
   - **ContentFul**
 
 
@@ -67,10 +69,8 @@ gatsby develop
 ```
 
 
-## Deploy with Netlify
+## 💫 Deploy with Netlify
 
-
-And lastly
-## 💫 Deploy
+And lastly, deploy your site to Netlify:
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/aslammultidots/blogger)
