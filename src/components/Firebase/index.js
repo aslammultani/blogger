@@ -105,7 +105,7 @@ class Firebase {
   users = () => this.db.ref('users')
 }
 
-let firebase
+// let firebase
 
 function getFirebase(app, auth, database) {
   if (!firebase) {
