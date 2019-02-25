@@ -7,7 +7,6 @@
 //   messagingSenderId: '826368275004',
 // }
 
-import * as firebase from 'firebase';
 
 const config = {
 	apiKey: process.env.REACT_APP_FIREBASE_APIKEY,
@@ -17,6 +16,8 @@ const config = {
 	storageBucket: process.env.REACT_APP_FIREBASE_STORAGEBUCKET,
 	clientId: process.env.REACT_APP_CLIENTID
 }
+
+console.log("key::", REACT_APP_FIREBASE_APIKEY);
 
 class Firebase {
   constructor(app) {
@@ -105,7 +106,7 @@ class Firebase {
   users = () => this.db.ref('users')
 }
 
-// let firebase
+let firebase
 
 function getFirebase(app, auth, database) {
   if (!firebase) {
