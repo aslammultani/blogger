@@ -7,8 +7,6 @@ const config = {
 	clientId: process.env.GATSBY__CLIENTID
 }
 
-console.log("key::", process.env.GATSBY__FIREBASE_APIKEY);
-
 class Firebase {
   constructor(app) {
     app.initializeApp(config)
