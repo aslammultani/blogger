@@ -1,7 +1,7 @@
 module.exports = {
   siteTitle: 'gatsby-contentful-demo',
   siteDescription: "👋 Hey There! I'm a GatsbyJs starter!",
-  authorName: 'J T',
-  disqusSiteUrl: 'https://gcstarter.netlify.com',
-  disqusShortname: 'gcstarter',
+  authorName: 'Author',
+  disqusSiteUrl: 'https://gatsby-blogger.netlify.com/',
+  disqusShortname: 'https-gatsby-blogger-netlify-com',
 }

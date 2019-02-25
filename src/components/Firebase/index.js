@@ -1,11 +1,11 @@
 const config = {
-  apiKey: 'AIzaSyB_EC4kekLVlRJS5Xq3uZXgZEd9_x36PvA',
-  authDomain: 'gcstarter01.firebaseapp.com',
-  databaseURL: 'https://gcstarter01.firebaseio.com',
-  projectId: 'gcstarter01',
-  storageBucket: 'gcstarter01.appspot.com',
-  messagingSenderId: '826368275004',
-}
+  apiKey: process.env.FB_API_KEY,
+  authDomain: process.env.FB_AUTH_DOMAIN,
+  databaseURL: process.env.FB_DATABASE_URL,
+  projectId: process.env.FB_PROJECT_ID,
+  storageBucket: process.env.FB_STORAGE_BUCKET,
+  messagingSenderId: process.env.FB_APP_MESSAGING_SENDER_ID,
+};
 
 class Firebase {
   constructor(app) {
