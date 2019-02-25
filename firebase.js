@@ -9,15 +9,15 @@
 
 
 const config = {
-	apiKey: process.env.REACT_APP_FIREBASE_APIKEY,
-	authDomain: process.env.REACT_APP_FIREBASE_AUTHDOMAIN,
-	databaseURL: process.env.REACT_APP_FIREBASE_DATABASEURL,
-	projectId: process.env.REACT_APP_FIREBASE_PROJECTID,
-	storageBucket: process.env.REACT_APP_FIREBASE_STORAGEBUCKET,
-	clientId: process.env.REACT_APP_CLIENTID
+	apiKey: process.env.GATSBY__FIREBASE_APIKEY,
+	authDomain: process.env.GATSBY__FIREBASE_AUTHDOMAIN,
+	databaseURL: process.env.GATSBY__FIREBASE_DATABASEURL,
+	projectId: process.env.GATSBY__FIREBASE_PROJECTID,
+	storageBucket: process.env.GATSBY__FIREBASE_STORAGEBUCKET,
+	clientId: process.env.GATSBY__CLIENTID
 }
 
-console.log("key::", process.env.REACT_APP_FIREBASE_APIKEY);
+console.log("key::", process.env.GATSBY__FIREBASE_APIKEY);
 
 class Firebase {
   constructor(app) {
@@ -64,7 +64,7 @@ class Firebase {
 
   doSendEmailVerification = () =>
     this.auth.currentUser.sendEmailVerification({
-      url: process.env.REACT_APP_CONFIRMATION_EMAIL_REDIRECT,
+      url: process.env.GATSBY__CONFIRMATION_EMAIL_REDIRECT,
     })
 
   doPasswordUpdate = password => this.auth.currentUser.updatePassword(password)

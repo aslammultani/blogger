@@ -6,6 +6,7 @@
   "dependencies": {
     "babel-plugin-styled-components": "^1.9.1",
     "disqus-react": "^1.0.5",
+    "dotenv": "^6.2.0",
     "gatsby": "^2.0.53",
     "gatsby-cli": "^2.4.5",
     "gatsby-image": "^2.0.21",
