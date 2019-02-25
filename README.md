@@ -7,7 +7,7 @@
   Gatsby + ContentFul + Firebase
 </h1>
 
-o [Live demo](https://gcstarter.netlify.com/).
+o [Live demo](https://gatsby-blogger.netlify.com/).
 
 **Features** 
 
