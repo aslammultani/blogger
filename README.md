@@ -9,7 +9,7 @@
 
 **Note:** This starter uses [Gatsby v2](https://www.gatsbyjs.org/blog/2018-09-17-gatsby-v2/).
 
-This demo is built with [Gatsby](https://www.gatsbyjs.org/), and [Netlify CMS](https://www.netlifycms.org): o [Live demo](https://gatsby-blogger.netlify.com/).
+This demo is built with [Gatsby](https://www.gatsbyjs.org/), and [Netlify CMS](https://www.netlifycms.org): [Demo URL](https://gatsby-blogger.netlify.com/).
 
 ## Features
 
