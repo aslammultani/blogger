@@ -71,7 +71,8 @@ class ContactForm extends Component {
       <div className="container">
         <div className="contactform">
           <h3>Contact Form</h3>
-          <form action={process.env.FORM_SENDER_LINK} method="POST" onSubmit={this.handleSubmit}>
+          {/* To make form work, use your own formspree credentials in action="" */}
+          <form action="" method="POST" onSubmit={this.handleSubmit}>
             <p>
               <label>Your name: </label>
               <input type="text" name="name"

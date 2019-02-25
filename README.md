@@ -14,13 +14,15 @@
 
 This demo is built with [Gatsby](https://www.gatsbyjs.org/), and [Netlify CMS](https://www.netlifycms.org): o [Live demo](https://gatsby-blogger.netlify.com/).
 
-**Features** 
+## Features
 
 - uses:
   - Gatsby.js (react + redux)
   - Firebase
   - ContentFul
   - Formspree
+  - Disqus
+
 - features:
   - Sign in
   - Sign up
@@ -28,23 +30,47 @@ This demo is built with [Gatsby](https://www.gatsbyjs.org/), and [Netlify CMS](h
   - Sign out
   - Protected routes with authorization
   - Contact form submitted to **Formspree**
+  - Disqus Comments
 
-**Quick start**
+## Prerequisite
 
-  -  ```Take the clone of this project.```
-  -  ```npm install```
+- Node
+- Gatsby CLI (globally installed)
 
-To run successfully use your **Firebase**, **disqus** and **ContentFul** credentials.
+## Quick Start
 
-**Use your own Firebase Credentials**
-- visit https://firebase.google.com/ and create a Firebase App then,
+Take the clone of this project.
 
-```gatsby develop```
+```sh
+npm install
+```
 
-Here it's running...😊
+## Requirements 
 
-```http://localhost:8000/```
+To run successfully use your own credentials for:
+  - **Firebase**, 
+  - **Disqus**, 
+  - **Formspree**,
+  - **ContentFul**
 
+
+#### Open the code and start editing files!
+
+You can run your site at `http://localhost:8000`
+
+Note: For making GraphQL work, run this link: `http://localhost:8000/___graphql`. Learn more about this tool in [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql).
+
+
+#### Start Developing
+
+For running your website locally, you have to run:
+
+```sh
+gatsby develop
+```
+
+
+## Deploy with Netlify
 
 
 And lastly
