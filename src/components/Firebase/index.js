@@ -17,7 +17,7 @@ const config = {
 	clientId: process.env.REACT_APP_CLIENTID
 }
 
-console.log("key::", REACT_APP_FIREBASE_APIKEY);
+console.log("key::", process.env.REACT_APP_FIREBASE_APIKEY);
 
 class Firebase {
   constructor(app) {
