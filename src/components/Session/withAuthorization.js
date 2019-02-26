@@ -49,9 +49,10 @@ const withAuthorization = condition => Component => {
   }
 
   const mapStateToProps = state => {
-    return{
-    authUser: state.sessionReducer.authUser,
-  }}
+    return {
+      authUser: state.sessionReducer.authUser,
+    }
+  }
 
   return compose(
     withFirebase,

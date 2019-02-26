@@ -28,7 +28,7 @@ class SignInPage extends Component {
       const firebase = getFirebase(values[0])
       this.setState({ firebase })
     })
-    setTimeout(() => this.setState({ isLoading: false }), 1000);
+    setTimeout(() => this.setState({ isLoading: false }), 1000)
   }
 
   render() {

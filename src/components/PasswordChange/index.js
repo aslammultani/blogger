@@ -1,38 +1,37 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 
-import { withFirebase } from '../Firebase/FirebaseContext';
+import { withFirebase } from '../Firebase/FirebaseContext'
 
 const INITIAL_STATE = {
   passwordOne: '',
   passwordTwo: '',
   error: null,
-};
+}
 class PasswordChangeForm extends Component {
   constructor(props) {
-    super(props);
-    this.state = { ...INITIAL_STATE };
+    super(props)
+    this.state = { ...INITIAL_STATE }
   }
 
   onSubmit = event => {
-    const { passwordOne } = this.state;
+    const { passwordOne } = this.state
 
     this.props.firebase
       .doPasswordUpdate(passwordOne)
       .then(() => {
-        this.setState(() => ({ ...INITIAL_STATE }));
+        this.setState(() => ({ ...INITIAL_STATE }))
       })
       .catch(error => {
-        this.setState({ error });
-      });
+        this.setState({ error })
+      })
 
-    event.preventDefault();
-  };
+    event.preventDefault()
+  }
 
   render() {
-    const { passwordOne, passwordTwo, error } = this.state;
+    const { passwordOne, passwordTwo, error } = this.state
 
-    const isInvalid =
-      passwordOne !== passwordTwo || passwordOne === '';
+    const isInvalid = passwordOne !== passwordTwo || passwordOne === ''
 
     return (
       <form onSubmit={this.onSubmit}>
@@ -60,8 +59,8 @@ class PasswordChangeForm extends Component {
 
         {error && <p>{error.message}</p>}
       </form>
-    );
+    )
   }
 }
 
-export default withFirebase(PasswordChangeForm);
+export default withFirebase(PasswordChangeForm)

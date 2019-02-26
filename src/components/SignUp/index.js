@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
-import { navigate } from 'gatsby';
-import { Link } from 'gatsby';
+import React, { Component } from 'react'
+import { navigate } from 'gatsby'
+import { Link } from 'gatsby'
 
-import * as routes from '../../constants/routes';
-import { withFirebase } from '../Firebase/FirebaseContext';
+import * as routes from '../../constants/routes'
+import { withFirebase } from '../Firebase/FirebaseContext'
 
 const INITIAL_STATE = {
   username: '',
@@ -11,53 +11,45 @@ const INITIAL_STATE = {
   passwordOne: '',
   passwordTwo: '',
   error: null,
-};
+}
 class SignUpForm extends Component {
   constructor(props) {
-    super(props);
+    super(props)
 
-    this.state = { ...INITIAL_STATE };
+    this.state = { ...INITIAL_STATE }
   }
 
   onSubmit = event => {
-    const { username, email, passwordOne } = this.state;
+    const { username, email, passwordOne } = this.state
 
     this.props.firebase
       .doCreateUserWithEmailAndPassword(email, passwordOne)
       .then(authUser => {
         // Create a user in your Firebase realtime database
-        return this.props.firebase
-          .user(authUser.user.uid)
-          .set({
-            username,
-            email,
-          });
+        return this.props.firebase.user(authUser.user.uid).set({
+          username,
+          email,
+        })
       })
       .then(() => {
-        this.setState({ ...INITIAL_STATE });
-        navigate(routes.LANDING);
+        this.setState({ ...INITIAL_STATE })
+        navigate(routes.LANDING)
       })
       .catch(error => {
-        this.setState({ error });
-      });
+        this.setState({ error })
+      })
 
-    event.preventDefault();
-  };
+    event.preventDefault()
+  }
 
   render() {
-    const {
-      username,
-      email,
-      passwordOne,
-      passwordTwo,
-      error,
-    } = this.state;
+    const { username, email, passwordOne, passwordTwo, error } = this.state
 
     const isInvalid =
       passwordOne !== passwordTwo ||
       passwordOne === '' ||
       username === '' ||
-      email === '';
+      email === ''
 
     return (
       <form onSubmit={this.onSubmit}>
@@ -103,7 +95,7 @@ class SignUpForm extends Component {
 
         {error && <p className="signup_error">{error.message}</p>}
       </form>
-    );
+    )
   }
 }
 
@@ -111,8 +103,8 @@ const SignUpLink = () => (
   <p className="signup_link">
     Don't have an account? <Link to={routes.SIGN_UP}>Sign Up</Link>
   </p>
-);
+)
 
-export { SignUpLink };
+export { SignUpLink }
 
-export default withFirebase(SignUpForm);
+export default withFirebase(SignUpForm)

@@ -7,7 +7,7 @@ const blogPage = (state, action) => {
     ...state,
     blogPage: action.status,
   }
-};
+}
 
 function blogReducer(state = INITIAL_STATE, action) {
   switch (action.type) {

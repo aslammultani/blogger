@@ -66,4 +66,4 @@ class SignInForm extends Component {
   }
 }
 
-export default (withFirebase(SignInForm))
+export default withFirebase(SignInForm)

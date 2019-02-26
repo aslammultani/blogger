@@ -20,7 +20,8 @@ const InnerPageContent = ({ data }) => (
       <Helmet>
         <title>{`${data.contentfulPages.title}`}</title>
       </Helmet>
-      <div className="innerpage_content"
+      <div
+        className="innerpage_content"
         dangerouslySetInnerHTML={{
           __html: data.contentfulPages.body.childMarkdownRemark.html,
         }}
@@ -66,7 +67,7 @@ class InnerPage extends Component {
       this.setState({ route: navigate('/') })
     }
   }
-  
+
   render() {
     const saveData = cookie.load('authUser')
     return (

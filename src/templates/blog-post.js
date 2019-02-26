@@ -10,16 +10,16 @@ import cookie from 'react-cookies'
 import { navigate } from 'gatsby'
 
 const BlogPageContent = ({ data }) => (
-<>
-  <Helmet title={`${data.title}`} />
-  <div className="container blogdetails">
-    <h1>{data.title}</h1>
-    <div
-      dangerouslySetInnerHTML={{ __html: data.body.childMarkdownRemark.html }}
-    />
-    <Disqus slug={data.slug} title={data.title} />
-  </div>
-</>
+  <>
+    <Helmet title={`${data.title}`} />
+    <div className="container blogdetails">
+      <h1>{data.title}</h1>
+      <div
+        dangerouslySetInnerHTML={{ __html: data.body.childMarkdownRemark.html }}
+      />
+      <Disqus slug={data.slug} title={data.title} />
+    </div>
+  </>
 )
 
 const authCondition = authUser => !!authUser
@@ -62,9 +62,9 @@ class BlogPost extends Component {
     return (
       <Fragment>
         {saveData ? (
-      <Layout>
-       <BlogPagePost data={this.props.data.contentfulBlog} />
-      </Layout>
+          <Layout>
+            <BlogPagePost data={this.props.data.contentfulBlog} />
+          </Layout>
         ) : (
           this.state.route
         )}

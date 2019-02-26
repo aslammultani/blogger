@@ -20,7 +20,11 @@ class IndexPageBase extends Component {
               Gatsby + Contentful + Firebase Demo{' '}
             </h1>
             {users.sessionReducer.authUser ? (
-              <Link onClick={()=>this.props.clickedOnBlog(true)} to={routes.HOME} className="signinlink">
+              <Link
+                onClick={() => this.props.clickedOnBlog(true)}
+                to={routes.HOME}
+                className="signinlink"
+              >
                 Check Out Our Blogs
               </Link>
             ) : (

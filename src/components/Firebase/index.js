@@ -1,10 +1,10 @@
 const config = {
-	apiKey: process.env.GATSBY__FIREBASE_APIKEY,
-	authDomain: process.env.GATSBY__FIREBASE_AUTHDOMAIN,
-	databaseURL: process.env.GATSBY__FIREBASE_DATABASEURL,
-	projectId: process.env.GATSBY__FIREBASE_PROJECTID,
-	storageBucket: process.env.GATSBY__FIREBASE_STORAGEBUCKET,
-	clientId: process.env.GATSBY__CLIENTID
+  apiKey: process.env.GATSBY__FIREBASE_APIKEY,
+  authDomain: process.env.GATSBY__FIREBASE_AUTHDOMAIN,
+  databaseURL: process.env.GATSBY__FIREBASE_DATABASEURL,
+  projectId: process.env.GATSBY__FIREBASE_PROJECTID,
+  storageBucket: process.env.GATSBY__FIREBASE_STORAGEBUCKET,
+  clientId: process.env.GATSBY__CLIENTID,
 }
 
 class Firebase {

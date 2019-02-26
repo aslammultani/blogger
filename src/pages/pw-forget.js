@@ -1,7 +1,7 @@
-import React, { Fragment } from 'react';
+import React, { Fragment } from 'react'
 
-import Layout from '../components/layout';
-import PasswordForgetForm from '../components/PasswordForget';
+import Layout from '../components/layout'
+import PasswordForgetForm from '../components/PasswordForget'
 
 const PasswordForgetPage = () => (
   <Fragment>
@@ -10,7 +10,7 @@ const PasswordForgetPage = () => (
       <PasswordForgetForm />
     </div>
   </Fragment>
-);
+)
 
 export default () => (
   <Layout>
@@ -18,4 +18,4 @@ export default () => (
       <PasswordForgetPage />
     </div>
   </Layout>
-);
+)

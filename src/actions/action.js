@@ -7,10 +7,9 @@ export function setAuthUser(user) {
   }
 }
 
-export function clickedOnBlog(status){
-  return{
+export function clickedOnBlog(status) {
+  return {
     type: actionTypes.BLOG_PAGE,
-    status
+    status,
   }
 }
-

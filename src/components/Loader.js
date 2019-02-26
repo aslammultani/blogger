@@ -3,7 +3,10 @@ class Loader extends Component {
   render() {
     return (
       <div className="loader-box">
-        <div className="lds-ripple"><div/><div/></div>
+        <div className="lds-ripple">
+          <div />
+          <div />
+        </div>
       </div>
     )
   }

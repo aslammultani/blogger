@@ -1,44 +1,44 @@
-import React, { Component } from 'react';
-import { Link } from 'gatsby';
+import React, { Component } from 'react'
+import { Link } from 'gatsby'
 
-import * as routes from '../../constants/routes';
-import { withFirebase } from '../Firebase/FirebaseContext';
+import * as routes from '../../constants/routes'
+import { withFirebase } from '../Firebase/FirebaseContext'
 
 const INITIAL_STATE = {
   email: '',
   error: null,
   message: '',
-};
+}
 
 class PasswordForgetForm extends Component {
   constructor(props) {
-    super(props);
+    super(props)
 
-    this.state = { ...INITIAL_STATE };
+    this.state = { ...INITIAL_STATE }
   }
 
   onSubmit = event => {
-    const { email } = this.state;
+    const { email } = this.state
 
     this.props.firebase
       .doPasswordReset(email)
       .then(() => {
-        this.setState(() => ({ 
+        this.setState(() => ({
           email: '',
           error: null,
           message: 'Password Reset Link is sent to your Email Address',
-        }));
+        }))
       })
       .catch(error => {
-        this.setState({ error });
-      });
+        this.setState({ error })
+      })
 
-    event.preventDefault();
-  };
+    event.preventDefault()
+  }
 
   render() {
-    const { email, error } = this.state;
-    const isInvalid = email === '';
+    const { email, error } = this.state
+    const isInvalid = email === ''
 
     return (
       <form onSubmit={this.onSubmit}>
@@ -58,7 +58,7 @@ class PasswordForgetForm extends Component {
 
         {error && <p className="signup_error">{error.message}</p>}
       </form>
-    );
+    )
   }
 }
 
@@ -66,8 +66,8 @@ const PasswordForgetLink = () => (
   <p className="forgotpwd_link">
     <Link to={routes.PASSWORD_FORGET}>Forgot Password?</Link>
   </p>
-);
+)
 
-export { PasswordForgetLink };
+export { PasswordForgetLink }
 
-export default withFirebase(PasswordForgetForm);
+export default withFirebase(PasswordForgetForm)

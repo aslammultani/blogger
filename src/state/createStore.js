@@ -1,5 +1,5 @@
-import { createStore as reduxCreateStore } from "redux"
-import rootReducer from '../reducers';
+import { createStore as reduxCreateStore } from 'redux'
+import rootReducer from '../reducers'
 
 const createStore = () => reduxCreateStore(rootReducer)
-export default createStore;
+export default createStore
